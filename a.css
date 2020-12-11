@@ -1,3 +1,12 @@
+body {
+  /*  background-color: #050608; */
+    font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF\4F53", "YuGothic", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "\30E1\30A4\30EA\30AA", Meiryo, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+}
+p {
+    color: #fff;
+}
+
+
 /*---------------------------------
  SIMPLE
 ---------------------------------*/
@@ -66,6 +75,7 @@
 .map{
     width:100%;
     background-color:#fafafa;
+    /*background-color: #050608;*/
 }
 .map .container{
     max-width:1000px;
@@ -100,6 +110,7 @@
 }
 .map .text{
     padding:50px;
+    /*color: #fff;*/
 }
 .map .text .heading{
     margin:0px 0px 40px 0px;
