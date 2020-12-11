@@ -1,0 +1,221 @@
+/*---------------------------------
+ SIMPLE
+---------------------------------*/
+.simple{
+    width:100%;
+}
+.simple .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+.simple .content {
+    padding:50px;
+    text-align:center;
+}
+.simple .content .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+/*---------------------------------
+　VISION　実質MAP
+---------------------------------*/
+.vision{
+    width:100%;
+    background-color:#fafafa;
+}
+.vision .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+@media (min-width: 992px) {
+    .vision .container .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.vision .content-item {
+    width:100%;
+}
+@media (min-width: 992px) {
+    .vision .content-item {
+        width:50%;
+    }
+}
+.vision .image{
+    display:block;
+    max-width:100%;
+    margin:0px auto;
+}
+.vision .text{
+    padding:50px;
+}
+.vision .text .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+/*---------------------------------
+ MAP 実質VISION
+---------------------------------*/
+.map{
+    width:100%;
+    background-color:#fafafa;
+}
+.map .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+@media (min-width: 992px) {
+    .map .container .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* PC時のみ順番を入れ替える */
+@media (min-width: 992px) {
+    .map .content {
+        flex-direction:row-reverse;
+    }
+}
+.map .content-item {
+    width:100%;
+}
+@media (min-width: 992px) {
+    .map .content-item {
+        width:50%;
+    }
+}
+.map .image{
+    display:block;
+    max-width:100%;
+    margin:0px auto;
+}
+.map .text{
+    padding:50px;
+}
+.map .text .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/*---------------------------------
+ WORKS
+---------------------------------*/
+.works{
+    width:100%;
+}
+.works .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+.works .content .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .works .content .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.works .content .list-item {
+    margin:50px 0px;
+    padding:0px 50px;
+    text-align:center;
+}
+@media (min-width: 992px) {
+    .works .content .list-item {
+        margin:0px;
+        width:calc(100% / 3);
+    }
+}
+.works .content .list-item .image{
+    display:block;
+    width:100%;
+    max-width:300px;
+    margin:0px auto 20px auto;
+    border-radius:100%;
+}
+.works .content .list-item .text{
+    line-height:1.8rem;
+    font-size:0.8rem;
+    color:#666666;
+}
+
+/*---------------------------------
+ BACK
+---------------------------------*/
+/*.back{
+    width:100%;
+    background-image:url(img/IMG_2810.JPG);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}*/
+.back{
+    background: url(img/IMG_2830.JPG) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+.back:before{
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+}
+.back .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+/* content */
+.back .content .heading{
+    margin:0px 0px 40px 0px;
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .back .content .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.back .content .list-item {
+    padding:30px;
+    line-height:1.8rem;
+    color:#ffffff;
+    text-align:center;
+}
+@media (min-width: 992px) {
+    .back .content .list-item {
+        width:50%;
+    }
+}
