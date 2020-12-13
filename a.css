@@ -118,6 +118,9 @@ body {
 }
 .map .text{
     padding:50px;
+    line-height:1.8rem;
+    font-size:0.8rem;
+    color:#666666;
 }
 .map .text .heading{
     margin:0px 0px 40px 0px;
@@ -165,8 +168,16 @@ body {
 }
 .intro .text{
     padding:50px;
-    /*color: #fff;*/
+    line-height:1.8rem;
+    font-size:0.8rem;
+    color:#666666;
 }
+.intro .text2{
+    line-height:1.8rem;
+    font-size:0.8rem;
+    color:#666666;
+}
+
 .intro .text .heading{
     margin:0px 0px 40px 0px;
     font-size: 24px;
@@ -179,6 +190,10 @@ body {
 ---------------------------------*/
 .works{
     width:100%;
+    background-color: #efb6b637;
+    line-height:1.8rem;
+    font-size:0.8rem;
+    color:#666666;
 }
 .works .container{
     max-width:1000px;
@@ -215,6 +230,7 @@ body {
     max-width:300px;
     margin:0px auto 20px auto;
     border-radius:100%;
+    border: 5px solid #0506084c; /* 半透明の枠線を付加 */
 }
 .works .content .list-item .text{
     line-height:1.8rem;
