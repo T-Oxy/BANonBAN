@@ -1,10 +1,64 @@
 body {
-  /*  background-color: #050608; */
+    /*background-color: #050608;*/
     font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF\4F53", "YuGothic", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "\30E1\30A4\30EA\30AA", Meiryo, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
 }
-p {
-    color: #fff;
-}
+/*---------------------------------
+ POPUP
+---------------------------------*/
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+  }
+  .popup.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 50px;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .popup-inner img {
+    width: 100%;
+  }
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .close-btn i {
+    font-size: 20px;
+    color: #333;
+  }
+  .black-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    cursor: pointer;
+  }
+
 
 
 /*---------------------------------
@@ -29,53 +83,13 @@ p {
     text-align: center;
 }
 /*---------------------------------
-　VISION　実質MAP
----------------------------------*/
-.vision{
-    width:100%;
-    background-color:#fafafa;
-}
-.vision .container{
-    max-width:1000px;
-    margin:0px auto;
-    padding:80px 0px;
-}
-@media (min-width: 992px) {
-    .vision .container .content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-.vision .content-item {
-    width:100%;
-}
-@media (min-width: 992px) {
-    .vision .content-item {
-        width:50%;
-    }
-}
-.vision .image{
-    display:block;
-    max-width:100%;
-    margin:0px auto;
-}
-.vision .text{
-    padding:50px;
-}
-.vision .text .heading{
-    margin:0px 0px 40px 0px;
-    font-size: 24px;
-    font-weight: normal;
-    text-align: center;
-}
-/*---------------------------------
- MAP 実質VISION
+　MAP
 ---------------------------------*/
 .map{
     width:100%;
     background-color:#fafafa;
     /*background-color: #050608;*/
+
 }
 .map .container{
     max-width:1000px;
@@ -87,12 +101,6 @@ p {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-}
-/* PC時のみ順番を入れ替える */
-@media (min-width: 992px) {
-    .map .content {
-        flex-direction:row-reverse;
     }
 }
 .map .content-item {
@@ -110,9 +118,56 @@ p {
 }
 .map .text{
     padding:50px;
-    /*color: #fff;*/
 }
 .map .text .heading{
+    margin:0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+/*---------------------------------
+ INTRO
+---------------------------------*/
+.intro{
+    width:100%;
+    /*background-color: #050608;*/
+}
+.intro .container{
+    max-width:1000px;
+    margin:0px auto;
+    padding:80px 0px;
+}
+@media (min-width: 992px) {
+    .intro .container .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* PC時のみ順番を入れ替える */
+@media (min-width: 992px) {
+    .intro .content {
+        flex-direction:row-reverse;
+    }
+}
+.intro .content-item {
+    width:100%;
+}
+@media (min-width: 992px) {
+    .intro .content-item {
+        width:50%;
+    }
+}
+.intro .image{
+    display:block;
+    max-width:100%;
+    margin:0px auto;
+}
+.intro .text{
+    padding:50px;
+    /*color: #fff;*/
+}
+.intro .text .heading{
     margin:0px 0px 40px 0px;
     font-size: 24px;
     font-weight: normal;

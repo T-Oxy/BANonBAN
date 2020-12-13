@@ -11,26 +11,37 @@
     <meta property="og:site_name" content="【禁止】に空いた【禁止】展">
     <meta property="og:description" content="ディジタルコンテンツ表現実習の作品">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="a.css">
     <title>【禁止】に空いた【禁止】展</title>
 </head>
 
 <body>
+<!-- POPUP-->
+    <div class="popup" id="js-popup">
+        <div class="popup-inner">
+            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+            <a href="#"><img src="img/popup.png" alt="禁止で構築された障壁"></a>
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+    </div>
+
+
 <!-- BACK -->
-<section class="back">
-    <div class="container">
-        <div class="content">
-            <h2 class="heading">【禁止】に空いた【禁止】展</h2>
-            <div class="list">
-                <div class="list-item">【幾多の【禁止】で築かれた【障壁】】に空いた【【禁止】が材料の【窓】】の展覧会
+    <section class="back">
+        <div class="container">
+            <div class="content">
+                <h2 class="heading"><font color="red">【禁止】</font>に空いた<font color="red">【禁止】</font>展</h2>
+                <div class="list">
+                    <div class="list-item">【幾多の【禁止】で築かれた【障壁】】に空いた【【禁止】が材料の【窓】】の展覧会
+                    </div>
+                    <div class="list-item">左に障壁、右に窓の説明</div>
                 </div>
-                <div class="list-item">左に障壁、右に窓の説明</div>
             </div>
         </div>
-    </div>
-</section>
-<!-- BACK -->
+    </section>
+
 <!-- TITLE -->
 <!--section class="simple">
     <div class="container">
@@ -45,119 +56,154 @@
 </section-->
 <!-- // MESSAGE -->
 
-<!-- VISION -->
-<section class="map">
-    <div class="container">
-        <div class="content">
-            <div class="content-item">
-                <div class="text">
-                    <h2 class="heading">御挨拶</h2>
-                    <h3>開催者</h3>
-                    奥川智貴<br>
-                    筑波大学  情報学群<br>
-                    情報メディア創成学類 学部 3年<br><br>
-                    ※顔出し禁止・一部音声禁止の点ご了承下さい。
+<!-- INTRO -->
+    <section class="intro">
+        <div class="container">
+            <div class="content">
+                <div class="content-item">
+                    <div class="text">
+                        <h2 class="heading">- 御挨拶 -</h2>
+                        <h3>開催者</h3>
+                        奥川智貴<br>
+                        筑波大学  情報学群<br>
+                        情報メディア創成学類 学部 3年<br><br>
+                        ※顔出し禁止・一部音声禁止の点ご了承下さい。
+                    </div>
                 </div>
-            </div>
-            <div class="content-item">
-                <!--img src="img/sample-1.jpg" class="image"-->
-                <video width="320px" height="180px" src="ban_intro.mp4" loop autoplay muted></video>
+                <div class="content-item">
+                    <!--img src="img/sample-1.jpg" class="image"-->
+                    <video width="320px" height="180px" src="ban_intro.mp4" loop autoplay muted></video>
 
-                <!--video width="320px" height="180px" controls>
-                    <source src="ban_intro.mp4">
-                </video-->
-            </div>    
+                    <!--video width="320px" height="180px" controls>
+                        <source src="ban_intro.mp4">
+                    </video-->
+                </div>    
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 <!-- // VISION -->
 
 <!-- MAP -->
-<section class="vision">
-    <div class="container">
-        <div class="content">
-            <div class="content-item">
-                <div class="text">
-                    <h2 class="heading">常設展<br>tsukuBAN</h2>
-                    <p>立入禁止看板や禁止標識は<br>廃れたフォルムから排他的な雰囲気を醸し出す点で<br>紛れもなく日常世界に点在する廃墟と呼べる。<br>
-                    </p>
+    <section class="map">
+        <div class="container">
+            <div class="content">
+                <div class="content-item">
+                    <div class="text">
+                        <h2 class="heading">- 常設展 -<br>tsukuBAN</h2>
+                        <p>廃れた形状から排他的な雰囲気を醸し出す立入禁止看板や禁止標識等は、紛れもなく日常世界に点在する廃墟だと形容できる。<br>
+                            凡常退廃に美が入り混る作品群を、是非会場まで足を運んで鑑賞してほしい。
+                        </p>
+                        <p>
+                            <strong>開催情報</strong><br>
+                            開催日時: 年中無休 24時間営業<br>
+                            料金: 入場無料<br>
+                            場所: 筑波大学<br>
+                            アクセス: つくば駅より徒歩9分
+                        </p>
+                    </div>
+                </div>    
+                <div class="content-item">
+                    <div class="content-item" id='mapbox' style='width: 400px; height: 300px;'></div>
                 </div>
-            </div>    
-            <div class="content-item">
-                <div class="content-item" id='mapbox' style='width: 300px; height: 225px;'></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <!-- // VISION -->
 
 <!-- WORKS -->
-<section class="works">
-    <div class="container">
-        <div class="content">
-            <h2 class="heading">企画展<br>techBAN</h2>
-            <div class="list">
-                <div class="list-item">
-                    <img src="img/IMG_2808.jpg" class="image">
-                    <div class="text">opencvのやつ</div>
+    <section class="works">
+        <div class="container">
+            <div class="content">
+                <h2 class="heading">- 企画展 -<br>techBAN</h2>
+                <div class="list">
+                    <div class="list-item">
+                        <img src="img/IMG_2808.jpg" class="image">
+                        <div class="text">opencvのやつ</div>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/IMG_2809.JPG" class="image">
+                            <div class="text">processingのやつ</div>
+                            </div>
+                    <div class="list-item">
+                        <img src="img/IMG_2810.JPG" class="image">
+                        <div class="text">ganとか?</div>
+                    </div>
                 </div>
-                <div class="list-item">
-                    <img src="img/IMG_2809.JPG" class="image">
-                        <div class="text">processingのやつ</div>
-                        </div>
-                <div class="list-item">
-                    <img src="img/IMG_2810.JPG" class="image">
-                    <div class="text">ganとか?</div>
+                <h2 class="heading"><br>chaBAN<br>~立入禁止の解釈~</h2>
+
+                <div class="list">
+                    <div class="list-item">
+                        <img src="img/stand.JPG" class="image">
+                        <div class="text">立入禁止</div>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/sit.JPG" class="image">
+                            <div class="text">座込許可</div>
+                            </div>
+                    <div class="list-item">
+                        <img src="img/stand_nega.JPG" class="image">
+                        <div class="text">人種平等</div>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/stand_cut.png" class="image">
+                        <div class="text">切断</div>
+                    </div>
                 </div>
+                <div class="list">
+                    <div class="list-item">
+                        <img src="img/popup.png" class="image">
+                        <div class="text">多種の【禁止】で構築された立入禁止</div>
+                    </div>
+                </div>            
             </div>
-            <h2 class="heading"><br>chaBAN</h2>
-            <div class="list">
-                <div class="list-item">
-                    <img src="img/stand.JPG" class="image">
-                    <div class="text">立入禁止</div>
-                </div>
-                <div class="list-item">
-                    <img src="img/sit.JPG" class="image">
-                        <div class="text">座込許可</div>
-                        </div>
-                <div class="list-item">
-                    <img src="img/stand_nega.JPG" class="image">
-                    <div class="text">人種平等</div>
-                </div>
-                <div class="list-item">
-                    <img src="img/stand_cut.png" class="image">
-                    <div class="text">切断事故</div>
-                </div>
-            </div>            
         </div>
-    </div>
-</section>
+    </section>
 <!-- // WORKS -->
 
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoidC1veHkiLCJhIjoiY2s1dGozbzdwMGp3OTNtcDRoNHBkZ2s1byJ9.YTyN-nCyp99au76R1DOtLw';
-    var map = new mapboxgl.Map({
-    container: 'mapbox',
-    style: 'mapbox://styles/t-oxy/ck5vt0xk92vbu1imcmo5jedcy',
-    center: [140.09988, 36.10375],
-    zoom: 13.11,
-    //  bearing: 0.00,
-    hash: true
-    });
-    //拡大・縮小・方位ナビゲーション
-    map.addControl(new mapboxgl.NavigationControl, 'top-left');
-    //フルスクリーンモード
-    map.addControl(new mapboxgl.FullscreenControl);
-    //スケール
-    map.addControl(new mapboxgl.ScaleControl({
-    maxWidth: 80,
-    unit: 'metric'
-    }));
-    //位置情報
-    map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {enableHighAccuracy: true},
-    trackUserLocation: true
-    }));
-</script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidC1veHkiLCJhIjoiY2s1dGozbzdwMGp3OTNtcDRoNHBkZ2s1byJ9.YTyN-nCyp99au76R1DOtLw';
+        var map = new mapboxgl.Map({
+        container: 'mapbox',
+        style: 'mapbox://styles/t-oxy/ck5vt0xk92vbu1imcmo5jedcy',
+        center: [140.09988, 36.10375],
+        zoom: 13.11,
+        //  bearing: 0.00,
+        hash: true
+        });
+        //拡大・縮小・方位ナビゲーション
+        map.addControl(new mapboxgl.NavigationControl, 'top-left');
+        //フルスクリーンモード
+        map.addControl(new mapboxgl.FullscreenControl);
+        //スケール
+        map.addControl(new mapboxgl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric'
+        }));
+        //位置情報
+        map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {enableHighAccuracy: true},
+        trackUserLocation: true
+        }));
+    </script>
+    <script>
+        window.onload = function() {
+            var popup = document.getElementById('js-popup');
+            if(!popup) return;
+            popup.classList.add('is-show');
+    
+            var blackBg = document.getElementById('js-black-bg');
+            var closeBtn = document.getElementById('js-close-btn');
+    
+            closePopUp(blackBg);
+            closePopUp(closeBtn);
+    
+            function closePopUp(elem) {
+                if(!elem) return;
+                elem.addEventListener('click', function() {
+                popup.classList.remove('is-show');
+                })
+            }
+        }
+    </script>
 </body>
 </html>
