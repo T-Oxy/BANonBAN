@@ -58,29 +58,68 @@ body {
     z-index: 1;
     cursor: pointer;
   }
-
-
-
 /*---------------------------------
- SIMPLE
+ BACK
 ---------------------------------*/
-.simple{
+/*.back{
     width:100%;
+    background-image:url(img/IMG_2810.JPG);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+}*/
+.back{
+    background: url(img/IMG_2830.JPG) no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+.back:before{
+    content: '';
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
 }
-.simple .container{
+.back .container{
     max-width:1000px;
     margin:0px auto;
     padding:80px 0px;
 }
-.simple .content {
-    padding:50px;
-    text-align:center;
-}
-.simple .content .heading{
+/* content */
+.back .content .heading{
     margin:0px 0px 40px 0px;
+    color:#ffffff;
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+}
+@media (min-width: 992px) {
+    .back .content .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.back .content .list-item {
+    padding:30px;
+    line-height:1.8rem;
+    color:#ffffff;
+    text-align:center;
+}
+@media (min-width: 992px) {
+    .back .content .list-item {
+        width:50%;
+    }
 }
 /*---------------------------------
 　MAP
@@ -184,7 +223,6 @@ body {
     font-weight: normal;
     text-align: center;
 }
-
 /*---------------------------------
  WORKS
 ---------------------------------*/
@@ -230,74 +268,10 @@ body {
     max-width:300px;
     margin:0px auto 20px auto;
     border-radius:100%;
-    border: 5px solid #0506084c; /* 半透明の枠線を付加 */
+/*    border: 5px solid #0506084c; */
 }
 .works .content .list-item .text{
     line-height:1.8rem;
     font-size:0.8rem;
     color:#666666;
-}
-
-/*---------------------------------
- BACK
----------------------------------*/
-/*.back{
-    width:100%;
-    background-image:url(img/IMG_2810.JPG);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center center;
-}*/
-.back{
-    background: url(img/IMG_2830.JPG) no-repeat center;
-    background-size: cover;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-  }
-.back:before{
-    content: '';
-    background: inherit;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-}
-.back .container{
-    max-width:1000px;
-    margin:0px auto;
-    padding:80px 0px;
-}
-/* content */
-.back .content .heading{
-    margin:0px 0px 40px 0px;
-    color:#ffffff;
-    font-size: 24px;
-    font-weight: normal;
-    text-align: center;
-}
-@media (min-width: 992px) {
-    .back .content .list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-.back .content .list-item {
-    padding:30px;
-    line-height:1.8rem;
-    color:#ffffff;
-    text-align:center;
-}
-@media (min-width: 992px) {
-    .back .content .list-item {
-        width:50%;
-    }
 }
